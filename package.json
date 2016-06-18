@@ -1,6 +1,21 @@
 {
-  "name": "Monitoring",
+  "name": "sensu-server-metrics",
   "version": "1.0.0",
+  "description": "Sensu metric check is a metrics check written in nodejs that gathers server performance indicators",
+  "author": "Buzut (buzut.fr)",
+  "keywords": [
+    "sensu",
+    "monitoring",
+    "metric check",
+    "server",
+    "performance",
+    "influxdb"
+  ],
+  "licence": "BSD 2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Buzut/sensu-server-metrics"
+  },
   "dependencies": {
     "current-processes": "^0.2.1",
     "lodash": "^4.13.1",
