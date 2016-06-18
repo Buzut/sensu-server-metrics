@@ -5,7 +5,7 @@ Sensu metric check is a metrics check written in nodejs that gathers server perf
 
 * As this check is written in NodeJS, [Node](https://nodejs.org/en/) has to be installed on the system running it.
 
-* The check was initialy written to store data in a InfluxDB. Therefore it outputs metrics on <code>stdin</code> 
+* The check was initialy written to store data in InfluxDB. Therefore it outputs metrics on <code>stdin</code> 
 and needs an appropriate handler. I have written one in Node that is [available as a Gist](https://gist.github.com/Buzut/dd49ee9c9b589f1035296ef96e63698e).
 
 ## Installation
@@ -29,3 +29,14 @@ Then add the check to your checks file:
     }
 }
 </pre></code>
+
+## Metrics
+
+The check gathers the following metrics:
+* 5 most cpu hungry processes cpu and memory usage
+* cpu load (in %)
+* RAM usage (in %)
+* SWAP usage (in %)
+* disk IOPS (read, write, total)
+* network rx & tx
+* fs usage (in %)
