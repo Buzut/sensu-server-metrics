@@ -1,11 +1,30 @@
 #!/usr/bin/nodejs
 
-const hostname = 'myHost';
-
 // currently https://github.com/Buzut/systeminformation needed
 const si = require('systeminformation');
 const _ = require('lodash');
 const ps = require('current-processes');
+
+// read config file
+var clientJSON;
+try {
+    clientJSON = '../../client.json';
+    fs.statSync(clientJSON);
+}
+catch (e) {
+    try {
+        clientJSON = '../../../client.json';
+        fs.statSync(clientJSON);
+    }
+    catch (e) {
+        console.log('client.json can\'t be found or read neither in sensu root nor in conf.d');
+        process.exit(3);
+    }
+}
+
+var clientConf = fs.readFileSync(clientJSON);
+clientConf = JSON.parse(clientConf);
+const hostname = clientConf.client.name;
 
 // don't start it at the same time as ps as it generates load by itself
 setTimeout(function(){
