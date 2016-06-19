@@ -2,7 +2,7 @@
   "name": "sensu-server-metrics",
   "version": "1.0.0",
   "description": "Sensu metric check is a metrics check written in nodejs that gathers server performance indicators",
-  "main": "metrics.js",
+  "main": "serverMetrics.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Buzut/sensu-server-metrics"
