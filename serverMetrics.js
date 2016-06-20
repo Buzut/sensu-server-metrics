@@ -1,6 +1,7 @@
 #!/usr/bin/nodejs
 
 // currently https://github.com/Buzut/systeminformation needed
+const fs = require('fs');
 const si = require('systeminformation');
 const _ = require('lodash');
 const ps = require('current-processes');
