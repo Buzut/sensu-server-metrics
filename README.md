@@ -24,7 +24,7 @@ Finally add the check to your checks file:
   "checks": {
     "collect_metrics": {
       "type": "metric",
-      "command": "/etc/sensu/plugins/node_modules/serverMetrics.js",
+      "command": "/etc/sensu/plugins/node_modules/sensu-server-metrics/serverMetrics.js",
       "interval": 30,
       "handlers": ["influxdb"],
       "subscribers": ["default"]
