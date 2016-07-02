@@ -14,9 +14,6 @@ In your Sensu plugins directory run:
 
 `npm install sensu-server-metrics`
 
-Note that it's important to have `node_modules` in the `plugins` directory. Otherwise it won't be able to locate `client.json` and read the host name from it.
-
-
 Finally add the check to your checks file:
 
 ```json

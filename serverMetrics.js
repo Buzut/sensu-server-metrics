@@ -9,12 +9,12 @@ const ps = require('current-processes');
 // read config file
 var clientJSON;
 try {
-    clientJSON = '../../client.json';
+    clientJSON = '/etc/sensu/client.json';
     fs.statSync(clientJSON);
 }
 catch (e) {
     try {
-        clientJSON = '../../../client.json';
+        clientJSON = '/etc/sensu/conf.d/client.json';
         fs.statSync(clientJSON);
     }
     catch (e) {
