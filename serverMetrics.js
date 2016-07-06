@@ -71,7 +71,9 @@ ps.get((err, processes) => {
     top5.forEach((el) => {
         // avoid the observer effect
         if (el.name === 'metrics.js') return;
-        console.log(`process_cpu,host=${hostname},name=${el.name} value=${el.cpu}`);
-        console.log(`process_mem,host=${hostname},name=${el.name} value=${el.mem.usage}`);
+
+        var cleanName = el.name.replace(' ', '_');
+        console.log(`process_cpu,host=${hostname},name=${cleanName} value=${el.cpu}`);
+        console.log(`process_mem,host=${hostname},name=${cleanName} value=${el.mem.usage}`);
     });
 });
