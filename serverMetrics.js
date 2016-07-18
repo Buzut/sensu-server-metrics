@@ -61,7 +61,7 @@ setTimeout(function(){
             }
         });
     });
-}, 500);
+}, 1000);
 
 ps.get((err, processes) => {
     // get five most CPU hungry
