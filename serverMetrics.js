@@ -36,7 +36,7 @@ setTimeout(function(){
         // Used - (buffered + cached) = buffer/cache used
         // Total - buffer/cache used = really avail
 
-        var ram = data.mem.used * (100 / data.mem.total);
+        var ram = (data.mem.used - data.mem.buffcache) * (100 / data.mem.total);
         var swap = (data.mem.swaptotal === 0) ? 0 : data.mem.swapused * (100 / data.mem.swaptotal);
         console.log(`ram_used,host=${hostname} value=${ram}`);
         console.log(`swap_used,host=${hostname} value=${swap}`);
