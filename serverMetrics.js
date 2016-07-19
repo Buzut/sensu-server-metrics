@@ -28,7 +28,7 @@ clientConf = JSON.parse(clientConf);
 const hostname = clientConf.client.name;
 
 // don't start it at the same time as ps as it generates load by itself
-setTimeout(function(){
+setTimeout(function () {
     si.getAllData((data) => {
         console.log(`cpu_load,host=${hostname} value=${data.currentLoad.currentload}`);
 
@@ -70,7 +70,7 @@ ps.get((err, processes) => {
 
     top5.forEach((el) => {
         // avoid the observer effect
-        if (el.name === 'metrics.js') return;
+        if (el.name === 'serverMetrics.js') return;
 
         var cleanName = el.name.replace(' ', '_');
         console.log(`process_cpu,host=${hostname},name=${cleanName} value=${el.cpu}`);
