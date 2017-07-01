@@ -20,8 +20,6 @@
     "url": "https://github.com/Buzut/sensu-server-metrics/issues"
   },
   "dependencies": {
-    "current-processes": "^0.2.1",
-    "lodash": "^4.13.1",
-    "systeminformation": "https://github.com/Buzut/systeminformation"
+    "systeminformation": "^3.23.5"
   }
 }
