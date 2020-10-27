@@ -20,6 +20,6 @@
     "url": "https://github.com/Buzut/sensu-server-metrics/issues"
   },
   "dependencies": {
-    "systeminformation": "^3.23.5"
+    "systeminformation": "^4.27.11"
   }
 }
